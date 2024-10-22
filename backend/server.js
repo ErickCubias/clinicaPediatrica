@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 const loginRoutes = require('./routes/loginRoutes');
 const patientRoutes=require('./routes/patientRoutes');
+const doctorRoutes=require('./routes/doctorRoutes');
 
 dotenv.config();
 const app = express();
@@ -19,7 +20,9 @@ console.log('CONECTADO A MONGODB');
 });
 // Definición de rutas
 app.use('/api', loginRoutes);
+app.use('/api', doctorRoutes);
 app.use('/api', patientRoutes);
+
 // Inicio del servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

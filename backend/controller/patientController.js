@@ -73,4 +73,3 @@ const eliminarPaciente = async (req, res) => {
     actualizarPaciente,
     eliminarPaciente,
     };
-    
